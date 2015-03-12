@@ -10,6 +10,37 @@
       <Platform>Win32</Platform>
     </ProjectConfiguration>
   </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="headers\crc32.h" />
+    <ClInclude Include="headers\deflate.h" />
+    <ClInclude Include="headers\gzguts.h" />
+    <ClInclude Include="headers\inffast.h" />
+    <ClInclude Include="headers\inffixed.h" />
+    <ClInclude Include="headers\inflate.h" />
+    <ClInclude Include="headers\inftrees.h" />
+    <ClInclude Include="headers\trees.h" />
+    <ClInclude Include="headers\zconf.h" />
+    <ClInclude Include="headers\zlib.h" />
+    <ClInclude Include="headers\zutil.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="sources\adler32.c" />
+    <ClCompile Include="sources\compress.c" />
+    <ClCompile Include="sources\crc32.c" />
+    <ClCompile Include="sources\deflate.c" />
+    <ClCompile Include="sources\gzclose.c" />
+    <ClCompile Include="sources\gzlib.c" />
+    <ClCompile Include="sources\gzread.c" />
+    <ClCompile Include="sources\gzwrite.c" />
+    <ClCompile Include="sources\infback.c" />
+    <ClCompile Include="sources\inffast.c" />
+    <ClCompile Include="sources\inflate.c" />
+    <ClCompile Include="sources\inftrees.c" />
+    <ClCompile Include="sources\main.cpp" />
+    <ClCompile Include="sources\trees.c" />
+    <ClCompile Include="sources\uncompr.c" />
+    <ClCompile Include="sources\zutil.c" />
+  </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{708173CC-A185-42EB-A96E-4F1A0E75D22C}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
@@ -39,9 +70,13 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LinkIncremental>true</LinkIncremental>
+    <IncludePath>$(ProjectDir)\headers;$(IncludePath)</IncludePath>
+    <SourcePath>$(ProjectDir)\sources;$(SourcePath)</SourcePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
+    <IncludePath>$(ProjectDir)\headers;$(IncludePath)</IncludePath>
+    <SourcePath>$(ProjectDir)\sources;$(SourcePath)</SourcePath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
@@ -73,8 +108,6 @@
       <OptimizeReferences>true</OptimizeReferences>
     </Link>
   </ItemDefinitionGroup>
-  <ItemGroup>
-  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
