@@ -43,6 +43,9 @@
     <ClCompile Include="sources\ZPacker.cpp" />
     <ClCompile Include="sources\zutil.c" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="example.bmp" />
+  </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{708173CC-A185-42EB-A96E-4F1A0E75D22C}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
