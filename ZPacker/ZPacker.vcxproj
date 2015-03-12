@@ -21,6 +21,7 @@
     <ClInclude Include="headers\trees.h" />
     <ClInclude Include="headers\zconf.h" />
     <ClInclude Include="headers\zlib.h" />
+    <ClInclude Include="headers\ZPacker.hpp" />
     <ClInclude Include="headers\zutil.h" />
   </ItemGroup>
   <ItemGroup>
@@ -39,6 +40,7 @@
     <ClCompile Include="sources\main.cpp" />
     <ClCompile Include="sources\trees.c" />
     <ClCompile Include="sources\uncompr.c" />
+    <ClCompile Include="sources\ZPacker.cpp" />
     <ClCompile Include="sources\zutil.c" />
   </ItemGroup>
   <PropertyGroup Label="Globals">

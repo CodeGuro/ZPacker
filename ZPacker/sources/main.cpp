@@ -1,8 +1,11 @@
-#include <zlib.h>
 #include <iostream>
+#include <ZPacker.hpp>
 
 int main( int argc, char **argv )
 {
-	std::cout << "Hello, world!" << std::endl;
+	ZPacker packer;
+
+	packer.pack_file( "example.bmp" );
+
 	return 0;
 }
