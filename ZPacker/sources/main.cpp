@@ -5,7 +5,8 @@ int main( int argc, char **argv )
 {
 	ZPacker packer;
 
-	packer.pack_file( "example.bmp" );
+	packer.process_file( "example.bmp.zlib", "example.bmp", packer.pack );
+	packer.process_file( "example(unpacked).bmp", "example.bmp.zlib", packer.unpack );
 
 	return 0;
 }

@@ -7,9 +7,12 @@ class ZPacker
 {
 private:
 public:
+	enum Mode
+	{
+		pack, unpack
+	};
 	ZPacker();
-	void pack_file( std::string filepath );
-	void unpack_file( std::string filepath );
+	void process_file( std::string destfilepath, std::string filepath, Mode mode );
 };
 
 #endif
